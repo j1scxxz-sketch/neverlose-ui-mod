@@ -1313,7 +1313,7 @@ function NeverLose:CreateOptionWindow(Frame: Frame , Zindex)
 			SetPosition();
 
 			NeverLose.PlayAnimate(OptionHandler , SlowyTween , {
-				BackgroundTransparency = 0.035
+				BackgroundTransparency = 0
 			})
 
 			NeverLose.PlayAnimate(UIStroke , SlowyTween , {
@@ -1504,7 +1504,7 @@ function NeverLose:CreateColorPicker(HandleFrame: Frame)
 			ColorPickerHandler.Position = UDim2.new(0,HandleFrame.AbsolutePosition.X + 20 , 0 ,HandleFrame.AbsolutePosition.Y + 75);
 
 			NeverLose.PlayAnimate(ColorPickerHandler,SlowyTween , {
-				BackgroundTransparency = 0.035
+				BackgroundTransparency = 0
 			})
 
 			NeverLose.PlayAnimate(UIStroke,SlowyTween , {
@@ -2889,7 +2889,7 @@ function NeverLose:RegisiterHandler(Handler: Frame , Signal)
 					SetPosition();
 
 					NeverLose.PlayAnimate(DropdownHandler , SlowyTween , {
-						BackgroundTransparency = 0.035
+						BackgroundTransparency = 0
 					})
 
 					if Config.AutoUpdate then
@@ -3327,7 +3327,7 @@ function NeverLose:CreateToolTips(Container: Frame , Name: string , Content: str
 			Tooltips.Position = UDim2.fromOffset(Container.AbsolutePosition.X + Container.AbsoluteSize.X , Container.AbsolutePosition.Y + (Container.AbsoluteSize.Y + 25));
 
 			NeverLose.PlayAnimate(Tooltips , SlowyTween , {
-				BackgroundTransparency = 0.075
+				BackgroundTransparency = 0
 			})
 
 			NeverLose.PlayAnimate(UIStroke , SlowyTween , {
@@ -3948,7 +3948,7 @@ end;
 	Window.SetRender = LPH_NO_VIRTUALIZE(function(self , value)
 		if value then
 			NeverLose.PlayAnimate(WindowFrame , SlowyTween , {
-				BackgroundTransparency = (NeverLose.EnabledBlur and 0.055) or 0.0255,
+				BackgroundTransparency = 0,
 				Size = Window.Size
 			})
 
@@ -4001,7 +4001,7 @@ end;
 			})
 
 			NeverLose.PlayAnimate(ConfigFrame , SlowyTween , {
-				BackgroundTransparency = 0.750
+				BackgroundTransparency = 0
 			})
 
 			NeverLose.PlayAnimate(UIStroke_2 , SlowyTween , {
@@ -4391,7 +4391,7 @@ end;
 	ConfigFrame.Parent = RightHeader
 	ConfigFrame.AnchorPoint = Vector2.new(0, 0.5)
 	ConfigFrame.BackgroundColor3 = Color3.fromRGB(13, 17, 22)
-	ConfigFrame.BackgroundTransparency = 0.750
+    ConfigFrame.BackgroundTransparency = 0
 	ConfigFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	ConfigFrame.BorderSizePixel = 0
 	ConfigFrame.Position = UDim2.new(0, 10, 0.5, 0)
@@ -4869,7 +4869,7 @@ end;
 
 			if value then
 				NeverLose.PlayAnimate(TabButton , SlowyTween , {
-					BackgroundTransparency = 0.500
+					BackgroundTransparency = 0
 				})
 
 				NeverLose.PlayAnimate(TabIcon , SlowyTween , {
@@ -5049,7 +5049,7 @@ end;
 					})
 
 					NeverLose.PlayAnimate(SectionHandler,SlowyTween,{
-						BackgroundTransparency = 0.500
+						BackgroundTransparency = 0
 					})
 
 					NeverLose.PlayAnimate(UIStroke,SlowyTween,{
@@ -5110,7 +5110,7 @@ end;
 				ConfigMenu.Position = UDim2.fromOffset(ConfigFrame.AbsolutePosition.X + 110 , ConfigFrame.AbsolutePosition.Y + 96)
 
 				NeverLose.PlayAnimate(ConfigMenu , SlowyTween , {
-					BackgroundTransparency = 0.035,
+					BackgroundTransparency = 0,
 					Position = UDim2.fromOffset(ConfigFrame.AbsolutePosition.X + 110 , ConfigFrame.AbsolutePosition.Y + 95)
 				})	
 
@@ -5979,7 +5979,7 @@ end;
 
 			if value then
 				NeverLose.PlayAnimate(Watermark,SlowyTween , {
-					BackgroundTransparency = 0.200
+					BackgroundTransparency = 0
 				})
 
 				Shadow:Render(true);
@@ -6412,7 +6412,7 @@ function NeverLose:CreateLogger()
 
 		NeverLose.PlayAnimate(LogFrame , SlowyTween , {
 			Size = UDim2.new(0, size.X + 35, 0, 20),
-			BackgroundTransparency =  0.075
+			BackgroundTransparency =  0
 		});
 
 		task.delay(0.15,LPH_NO_VIRTUALIZE(function()
@@ -6605,7 +6605,7 @@ function NeverLose:CreateIndicator()
 
 			if value then
 				NeverLose.PlayAnimate(IndicatorItem , SlowyTween , {
-					BackgroundTransparency = 0.200
+					BackgroundTransparency = 0
 				});
 
 				NeverLose.PlayAnimate(Line , SlowyTween , {
