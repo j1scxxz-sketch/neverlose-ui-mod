@@ -1,4 +1,4 @@
-local NeverLose = loadstring(game:HttpGet("https://raw.githubusercontent.com/4lpaca-pin/NeverLose/refs/heads/main/source.luau"))()
+local NeverLose = loadstring(game:HttpGet("https://raw.githubusercontent.com/j1scxxz-sketch/neverlose-ui-mod/refs/heads/main/source.luau"))()
 
 local Window = NeverLose:CreateWindow({
     Logo = NeverLose.GlobalLogo,
