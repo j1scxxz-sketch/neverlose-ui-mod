@@ -3508,23 +3508,23 @@ function NeverLose:RegisiterItem(Frame: Frame , Signel)
 			BackgroundTransparency = 0.35
 		});
 
-			NeverLose.PlayAnimate(BasedLabel , SlowyTween , {
-				TextTransparency = 0.25
-			})
-
-	end))) --]]
-	--[[
+		NeverLose.PlayAnimate(BasedLabel , SlowyTween , {
+			TextTransparency = 0.25
+		})
+	end)))
+	
 	NeverLose:AddSignal(BasedFrame.MouseLeave:Connect(LPH_NO_VIRTUALIZE(function()
 		NeverLose.PlayAnimate(BasedFrame , SlowyTween , {
 			BackgroundTransparency = 1
 		});
 
-			NeverLose.PlayAnimate(BasedLabel , SlowyTween , {
-				TextTransparency = 0.35
-			})
-		end)))
+		NeverLose.PlayAnimate(BasedLabel , SlowyTween , {
+			TextTransparency = 0.35
+		})
+	end)))
+	--]]
 
-		function handle:SetText(t)
+	function handle:SetText(t)
 			local oldtxt = BasedLabel.Text;
 
 			BasedLabel.Text = t;
@@ -4165,8 +4165,7 @@ end;
 	WindowName.Font = Enum.Font.GothamBold
 	WindowName.Text = Window.Name
 	WindowName.TextColor3 = Color3.fromRGB(255, 255, 255)
-		WindowName.TextSize = 14.000
-	WindowName.TextXAlignment = Enum.TextXAlignment.Left
+	WindowName.Size = UDim2.new(0, 200, 0, 25)
 
 	WindowContent.Name = NeverLose.RandomString();
 	WindowContent.Parent = HeadFrame
@@ -4217,6 +4216,8 @@ end;
 		LeftScrollingFrame.CanvasSize = UDim2.fromOffset(0,UIListLayout.AbsoluteContentSize.Y + 1)
 	end)))
 
+	BottomFrame.Name = NeverLose.RandomString();
+	BottomFrame.Parent = LeftMenuFrame
 	BottomFrame.AnchorPoint = Vector2.new(0, 1)
 	BottomFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	BottomFrame.BackgroundTransparency = 1.000
@@ -5020,8 +5021,8 @@ end;
 			UIStroke.Color = Color3.fromRGB(45, 48, 58)
 			UIStroke.Parent = SectionHandler
 
-			CornerRadius = UDim.new(0, 0)
-			UICorner.Parent = SectionHandler
+		UICorner.CornerRadius = UDim.new(0, 0)
+		UICorner.Parent = SectionHandler
 
 			UIListLayout.Parent = SectionHandler
 			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
